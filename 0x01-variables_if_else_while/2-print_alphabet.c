@@ -4,7 +4,8 @@
  *	main - alphabet in lowercase, followed by a new line.
  *
  *	Description: Prints letter a to z in lower case
- *	Always return(0)
+ *
+ *	Return: 0
  */
 
 int main(void)
@@ -16,6 +17,5 @@ int main(void)
 		putchar(letter);
 	}
 	putchar('\n');
-
 	return (0);
 }
