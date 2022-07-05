@@ -1,35 +1,28 @@
-#include "main.h"
 #include <stdio.h>
-
 /**
- * main - prints first 50 numbers of the fibonacci sequence
- *
- * Description: prints from 1 to 50
+ * main - main block
+ * Description: computes and prints the sum of all the multiples of 3 or
+ * 5 below 1024 (excluded), followed by a new line
  * Return: 0
  */
-
 int main(void)
 {
-	int i, n, first_count, sec_count, next_num;
+	int i = 0;
+	long int a = 0, b = 1, next;
 
-	first_count = 1;
-	sec_count = 2;
-	n = 50;
-
-	for (i = 0; i < n; i++)
+	while (i < 50)
 	{
-		if (i == 1)
+		next = a + b;
+		a = b;
+		b = next;
+		printf("%lu", next);
+
+		if (i < 49)
 		{
-			printf("%d", first_count);
+			printf(", ");
 		}
-		else
-		{
-			printf("%d, ", first_count);
-			next_num = first_count + sec_count;
-			first_count = sec_count;
-			sec_count = next_num;
-		}
+		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
